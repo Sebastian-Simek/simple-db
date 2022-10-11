@@ -1,7 +1,7 @@
 const fs = require('fs/promises');
 const path = require('path');
 const SimpleDb = require('../lib/simple-db');
-const crypto = require('crypto');
+// const crypto = require('crypto');
 
 
 const { CI, HOME } = process.env;
@@ -20,13 +20,13 @@ describe('simple database', () => {
     const file = await newDb.getById('12345');
     expect(file).toEqual({ 'name': 'Sebastian' });
   });
-  it('POST should save an object', async () => {
-    const newObj = {
-      name: 'stupid',
-      age: 'always'
-    };
-    const newDb = new SimpleDb(TEST_DIR);
+  // it('POST should save an object', async () => {
+  //   const newObj = {
+  //     name: 'stupid',
+  //     age: 'always'
+  //   };
+  //   const newDb = new SimpleDb(TEST_DIR);
     
-  });
+  // });
 
 });
